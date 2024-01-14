@@ -1,0 +1,15 @@
+alias grep='grep --color=auto'
+alias vim='nvim'
+alias p='sudo pacman'
+alias c="clear"
+alias ls="logo-ls -A"
+alias ll="logo-ls -lA"
+alias l="logo-ls -A"
+alias radeontop="radeontop -c -T"
+alias btop="btop --utf-force"
+alias please='sudo $(fc -ln -1)'
+alias cl="c & l"
+# alias neofetch="neofetch --ascii ~/.config/neofetch/images/sus"
+alias ab="conda activate ab && activity-browser"
+alias i3=" vim ~/.config/i3/config"
+alias kitty="vim ~/.config/kitty/kitty.conf"
