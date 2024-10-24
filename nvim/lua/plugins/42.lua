@@ -14,5 +14,6 @@ return {
 			require("42header").setup(opts)
 		end,
 	},
-	'hardyrafael17/norminette42.nvim'
+	'hardyrafael17/norminette42.nvim',
+	'cacharle/c_formatter_42.vim'
 }
