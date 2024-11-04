@@ -126,6 +126,7 @@ alias gp="git push"
 alias g="ga && gm && gp"
 
 
+alias t="make test"
 
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
