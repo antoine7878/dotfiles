@@ -80,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -125,11 +125,18 @@ alias gm="git commit -m'auto'"
 alias gp="git push"
 alias g="ga && gm && gp"
 
-
 alias t="make test"
+alias vt="make vtest"
+alias re="make re"
+alias bonus="make bonus"
+alias clean="make clean"
+alias fclean="make fclean"
+alias ffclean="make ffclean"
 
+alias bash="bash --posix"
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/home/antoine/.local/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
