@@ -12,6 +12,6 @@ return {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		opts = { ensure_installed = { "c" } },
+		opts = { ensure_installed = { "cpp" } },
 	}
 }

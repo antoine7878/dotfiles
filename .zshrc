@@ -111,7 +111,7 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
- #   prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+   # prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
 
@@ -128,15 +128,20 @@ alias g="ga && gm && gp"
 alias t="make test"
 alias vt="make vtest"
 alias re="make re"
+alias rre="make rre"
 alias bonus="make bonus"
 alias clean="make clean"
 alias fclean="make fclean"
 alias ffclean="make ffclean"
+alias b="bear -- make re"
 
 alias bash="bash --posix"
+alias count="cat *.c */*.c | wc -l"
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/home/antoine/.local/bin"
+export PATH="$PATH:/home/antoine/42/MyClass/"
+export PATH="$PATH:/home/antoine/.avm/bin/"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -145,3 +150,4 @@ export PATH="$PATH:/home/antoine/.local/bin"
 alias francinette=/home/antoine/francinette/tester.sh
 
 alias paco=/home/antoine/francinette/tester.sh
+export PATH=/home/antoine/.local/funcheck/host:$PATH

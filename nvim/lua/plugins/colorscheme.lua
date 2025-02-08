@@ -1,7 +1,5 @@
 return {
-	{ "navarasu/onedark.nvim",
-		opts = { style = 'deep' }
-	},
+	{ "navarasu/onedark.nvim"},
 
 	{
 		"LazyVim/LazyVim",
