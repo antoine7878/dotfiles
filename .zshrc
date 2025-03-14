@@ -144,10 +144,6 @@ export PATH="$PATH:/home/antoine/42/MyClass/"
 export PATH="$PATH:/home/antoine/.avm/bin/"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-alias francinette=/home/antoine/francinette/tester.sh
-
-alias paco=/home/antoine/francinette/tester.sh
 export PATH=/home/antoine/.local/funcheck/host:$PATH
