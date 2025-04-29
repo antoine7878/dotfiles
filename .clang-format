@@ -1,0 +1,12 @@
+# IndentWidth: 4
+Standard: Cpp03
+BasedOnStyle: Microsoft
+AlignConsecutiveDeclarations: true
+SeparateDefinitionBlocks: Always
+BreakTemplateDeclarations: true
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Empty
+RemoveParentheses: ReturnStatement
+UseTab: Always
+IndentWidth: 4
+TabWidth: 4

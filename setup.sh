@@ -1,12 +1,16 @@
- #!/usr/bin/bash
-ln -s ~/dotfiles/nvim	~/.config/
-ln -s ~/dotfiles/kitty	~/.config/
-ln -s ~/dotfiles/tmux	~/.config/
-ln -s ~/dotfiles/.zshrc	~/
+#!/usr/bin/bash
+# rm -rf ~/.config/nvim
+# rm -rf ~/.local/share/nvim
+# rm -rf ~/.local/state/nvim
+# rm -rf ~/.cache/nvim
 
-python3 -m pip install --upgrade pip setuptools
+rm -rf ~/.ruff.toml
+rm -rf ~/.config/nvim
+rm -rf ~/.zshrc
+rm -rf ~/.clang-format
 
-pipx install c-formatter-42
-pipx install norminette
-pipx install nodejs
-pipx install npm
+ln -s ~/dotfiles/nvim ~/.config/
+ln -s ~/dotfiles/.zshrc ~/
+ln -s ~/dotfiles/.clang-format ~/
+ln -s ~/dotfiles/.ruff.toml ~/
+
