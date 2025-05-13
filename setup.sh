@@ -9,6 +9,7 @@ rm -rf ~/.cache/nvim
 
 rm -rf ~/.config/nvim
 rm -rf ~/.config/zsh
+rm -rf ~/.config/kitty
 
 rm -rf ~/.clang-format
 rm -rf ~/.fonts
@@ -23,6 +24,7 @@ rm -rf ~/.zshenv
 
 ln -s ~/dotfiles/nvim ~/.config/
 ln -s ~/dotfiles/zsh ~/.config/
+ln -s ~/dotfiles/kitty ~/.config/
 
 ln -s ~/dotfiles/.clang-format ~/
 ln -s ~/dotfiles/.fonts ~/
