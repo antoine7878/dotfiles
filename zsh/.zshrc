@@ -33,11 +33,12 @@ gitacp() {
 
 setxkbmap -option caps:escape
 
+export PYGAME_HIDE_SUPPORT_PROMPT=hide
+
 alias g=gitacp
 alias ga="git add -A"
 alias gp="git push"
 alias grep="grep -r -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}"
-alias conda='micromamba'
 
 if [ "$USER" = "ale-tell" ]; then
 	export PATH=$HOME/.brew/bin:$PATH
@@ -52,16 +53,18 @@ else
 	export PATH="$PATH:/home/antoine/.local/bin"
 	export PATH="$PATH:/home/antoine/.avm/bin/"
 fi
-
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'micromamba shell init' !!
-export MAMBA_EXE='/home/antoin/.local/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/home/antoin/micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/antoine/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
+    eval "$__conda_setup"
 else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
+    if [ -f "/home/antoine/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/antoine/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/antoine/miniconda3/bin:$PATH"
+    fi
 fi
-unset __mamba_setup
-# <<< mamba initialize <<<
+unset __conda_setup
+# <<< conda initialize <<<
+
