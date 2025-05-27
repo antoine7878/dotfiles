@@ -31,7 +31,9 @@ gitacp() {
   git push
 }
 
-setxkbmap -option caps:escape
+if [ "$USER" != "root" ]; then
+	setxkbmap -option caps:escape
+fi
 
 export PYGAME_HIDE_SUPPORT_PROMPT=hide
 
