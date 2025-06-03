@@ -39,6 +39,7 @@ alias g=gitacp
 alias ga="git add -A"
 alias gp="git push"
 alias grep="grep -r -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}"
+alias venv="source venv.sh"
 
 if [ "$USER" = "ale-tell" ]; then
 	export PATH=$HOME/.brew/bin:$PATH
@@ -48,10 +49,14 @@ if [ "$USER" = "ale-tell" ]; then
 else
 	alias cc="clang"
 	alias c++="clang++"
-	alias python="python3"
 	export PATH="$PATH:/opt/nvim-linux64/bin"
 	export PATH="$PATH:/home/antoine/.local/bin"
 	export PATH="$PATH:/home/antoine/.avm/bin/"
+	export PATH="$PATH:/home/antoine/.local/pycharm/bin"
+	export CUDA_HOME=/opt/cuda
+	export PATH=$CUDA_HOME/bin:$PATH
+	export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+	export XLA_FLAGS="--xla_gpu_cuda_data_dir=/opt/cuda"
 fi
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

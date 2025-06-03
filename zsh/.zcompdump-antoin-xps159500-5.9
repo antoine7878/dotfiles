@@ -1,4 +1,4 @@
-#files: 842	version: 5.9
+#files: 847	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -67,6 +67,7 @@ _comps=(
 'attr' '_attr'
 'augtool' '_augeas'
 'autoload' '_typeset'
+'autorandr' '_autorandr'
 'avahi-browse' '_avahi'
 'avahi-browse-domains' '_avahi'
 'avahi-resolve' '_avahi'
@@ -217,6 +218,7 @@ _comps=(
 'ctags' '_ctags'
 'ctags-exuberant' '_ctags'
 'ctags-universal' '_ctags'
+'ctr' '_ctr'
 'curl' '_curl'
 'cut' '_cut'
 'cvs' '_cvs'
@@ -261,6 +263,7 @@ _comps=(
 'dmesg' '_dmesg'
 'dmidecode' '_dmidecode'
 'doas' '_doas'
+'docker' '_docker'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
 'downgrade' '_downgrade'
@@ -324,6 +327,7 @@ _comps=(
 'extractres' '_psutils'
 'fakeroot' '_fakeroot'
 'false' '_nothing'
+'fastfetch' '_fastfetch'
 'fc' '_fc'
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
@@ -643,6 +647,7 @@ _comps=(
 'join' '_join'
 'journalctl' '_journalctl'
 'jq' '_jq'
+'jupyter' '_jupyter'
 'kdeconnect-cli' '_kdeconnect'
 'kernel-install' '_kernel-install'
 'keystone' '_openstack'
@@ -1690,10 +1695,11 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _bluetoothctl _bootctl _busctl _bwrap _checkupdates \
-            _code _coredumpctl _curl _dkms _downgrade \
-            _dunst _dunstctl _fd _firewalld _hostnamectl \
-            _img2sixel _insmod _journalctl _kernel-install _kitty \
+autoload -Uz _autorandr _bluetoothctl _bootctl _busctl _bwrap \
+            _checkupdates _code _coredumpctl _ctr _curl \
+            _dkms _docker _downgrade _dunst _dunstctl \
+            _fastfetch _fd _firewalld _hostnamectl _img2sixel \
+            _insmod _journalctl _jupyter _kernel-install _kitty \
             _libinput _localectl _loginctl _lsmod _machinectl \
             _mpv _netctl _networkctl _oomctl _paccache \
             _pacdiff _pacignore _paclist _paclog-pkglist _pacman \
@@ -1864,5 +1870,5 @@ autoload -Uz +X _call_program
 typeset -gUa _comp_assocs
 _comp_assocs=( '' )
 
-#omz revision: 26a462c2df6a480a844a03205b4493f6b8b08c8c
+#omz revision: c2d54caf5dcc929d8ae9600a05bd3e70e81529f6
 #omz fpath: /home/antoine/.oh-my-zsh/plugins/git /home/antoine/.oh-my-zsh/functions /home/antoine/.oh-my-zsh/completions /home/antoine/.oh-my-zsh/custom/functions /home/antoine/.oh-my-zsh/custom/completions /home/antoine/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Math /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle
