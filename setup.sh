@@ -18,6 +18,8 @@ rm -rf ~/.zshenv
 
 ######################
 
+mkdir -p ~/.config
+
 ln -s ~/dotfiles/nvim ~/.config/
 ln -s ~/dotfiles/zsh ~/.config/
 ln -s ~/dotfiles/kitty ~/.config/
