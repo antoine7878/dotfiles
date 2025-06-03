@@ -46,7 +46,6 @@ alias venv="source venv.sh"
 if [ "$USER" = "ale-tell" ]; then
 	export PATH=$PATH:"$HOME/Appimage"
 	export PATH=$PATH:"$HOME/.local/bin"
-	export PATH=$PATH:"$HOME/42/MyClass/"
 	export PATH="/home/ale-tell/miniconda3/condabin:$PATH"
 	
 	# >>> conda initialize >>>
@@ -71,7 +70,8 @@ else
 	alias c++="clang++"
 	export PATH="$PATH:/opt/nvim-linux64/bin"
 	export PATH="$PATH:/home/antoine/.local/bin"
-	export PATH="$PATH:/home/antoine/.avm/bin/"
+	# export PATH="$PATH:/home/antoine/.avm/bin/"
+
 	export CUDA_HOME=/opt/cuda
 	export PATH=$CUDA_HOME/bin:$PATH
 	export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
