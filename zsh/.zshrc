@@ -48,11 +48,11 @@ export PYGAME_HIDE_SUPPORT_PROMPT=hide
 alias ga="git add -A"
 alias gp="git push"
 alias grep="grep -r -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}"
+alias venv="source venv.sh"
 
 if [ "$USER" = "ale-tell" ]; then
 	export PATH=$PATH:"$HOME/Appimage"
 	export PATH=$PATH:"$HOME/.local/bin"
-	export PATH=$PATH:"$HOME/42/MyClass/"
 	export PATH="/home/ale-tell/miniconda3/condabin:$PATH"
 	
 	# >>> conda initialize >>>
@@ -75,10 +75,16 @@ if [ "$USER" = "ale-tell" ]; then
 else
 	alias cc="clang"
 	alias c++="clang++"
-	alias python="python3"
 	export PATH="$PATH:/opt/nvim-linux64/bin"
 	export PATH="$PATH:/home/antoine/.local/bin"
-	export PATH="$PATH:/home/antoine/.avm/bin/"
+	# export PATH="$PATH:/home/antoine/.avm/bin/"
+
+	export CUDA_HOME=/opt/cuda
+	export PATH=$CUDA_HOME/bin:$PATH
+	export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+	export XLA_FLAGS="--xla_gpu_cuda_data_dir=/opt/cuda"
+	
+
 	# >>> conda initialize >>>
 	# !! Contents within this block are managed by 'conda init' !!
 	__conda_setup="$('/home/antoine/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -93,5 +99,4 @@ else
 	fi
 	unset __conda_setup
 	# <<< conda initialize <<<
-
 fi
