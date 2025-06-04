@@ -30,14 +30,21 @@ gitacp() {
   git commit -m "$1"
   git push
 }
+alias g=gitacp
 
-if [ "$USER" != "root" ]; then
+git42() {
+	git clone $1 repo_vogosphere
+	mv repo_vogosphere/.git .
+	rm -rf repo_vogosphere
+}
+alias vogo=git42
+
+if [ "$HOME" != "/root" ]; then
 	setxkbmap -option caps:escape
 fi
 
 export PYGAME_HIDE_SUPPORT_PROMPT=hide
 
-alias g=gitacp
 alias ga="git add -A"
 alias gp="git push"
 alias grep="grep -r -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}"
