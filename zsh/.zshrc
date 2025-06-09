@@ -6,6 +6,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
+alias python='python3'
 alias gg="ccf main.c && ./a.out"
 alias vim="nvim"
 alias t="make test"
@@ -39,7 +40,7 @@ git42() {
 }
 alias vogo=git42
 
-if [ "$HOME" != "/root" ]; then
+if [ "$XDG_SESSION_TYPE" != "wayland" ]; then
 	setxkbmap -option caps:escape
 fi
 
@@ -49,10 +50,10 @@ alias ga="git add -A"
 alias gp="git push"
 alias grep="grep -r -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}"
 alias venv="source venv.sh"
+export PATH=$PATH:"$HOME/Appimage"
+export PATH=$PATH:"$HOME/.local/bin"
 
 if [ "$USER" = "ale-tell" ]; then
-	export PATH=$PATH:"$HOME/Appimage"
-	export PATH=$PATH:"$HOME/.local/bin"
 	export PATH="/home/ale-tell/miniconda3/condabin:$PATH"
 	
 	# >>> conda initialize >>>
@@ -77,7 +78,6 @@ else
 	alias c++="clang++"
 	export PATH="$PATH:/opt/nvim-linux64/bin"
 	export PATH="$PATH:/home/antoine/.local/bin"
-	# export PATH="$PATH:/home/antoine/.avm/bin/"
 
 	export CUDA_HOME=/opt/cuda
 	export PATH=$CUDA_HOME/bin:$PATH
@@ -100,3 +100,4 @@ else
 	unset __conda_setup
 	# <<< conda initialize <<<
 fi
+eval "$(oh-my-posh init zsh)"

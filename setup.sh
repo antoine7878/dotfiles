@@ -10,7 +10,6 @@ rm -rf ~/.config/i3
 rm -rf ~/.oh-my-zsh
 rm -rf ~/.clang-format
 rm -rf ~/.fonts
-rm -rf ~/.p10k.zsh
 rm -rf ~/.prettierrc.yaml
 rm -rf ~/.ruff.toml
 rm -rf ~/.vimrc
@@ -28,7 +27,6 @@ ln -s ~/dotfiles/i3 ~/.config/
 ln -s ~/dotfiles/.clang-format ~/
 ln -s ~/dotfiles/.oh-my-zsh ~/
 ln -s ~/dotfiles/.fonts ~/
-ln -s ~/dotfiles/.p10k.zsh ~/
 ln -s ~/dotfiles/.prettierrc.yaml ~/
 ln -s ~/dotfiles/.ruff.toml ~/
 ln -s ~/dotfiles/.vimrc ~/
