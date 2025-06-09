@@ -100,4 +100,4 @@ else
 	unset __conda_setup
 	# <<< conda initialize <<<
 fi
-eval "$(oh-my-posh init zsh --config /home/antoine/.cache/oh-my-posh/themes/catppuccin_mocha.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh.json)"
