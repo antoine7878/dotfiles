@@ -70,9 +70,6 @@ if [ "$USER" = "ale-tell" ]; then
 	fi
 	unset __conda_setup
 	# <<< conda initialize <<<
-
-
-
 else
 	alias cc="clang"
 	alias c++="clang++"
@@ -100,4 +97,5 @@ else
 	unset __conda_setup
 	# <<< conda initialize <<<
 fi
-# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh.json)"
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
