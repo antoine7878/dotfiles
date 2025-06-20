@@ -4,7 +4,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source ./zsh_function
-source ./zsh_alias
-source ./zsh_env
-source ./zsh_conda
+source $ZDOTDIR/zsh_function
+source $ZDOTDIR/zsh_alias
+source $ZDOTDIR/zsh_env
