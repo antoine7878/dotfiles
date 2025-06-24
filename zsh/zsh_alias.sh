@@ -15,6 +15,7 @@ alias fclean="make fclean"
 alias ffclean="make ffclean"
 
 alias python='python3'
+alias s='source .venv/bin/activate'
 
 alias ga="git add -A"
 alias gp="git push"
