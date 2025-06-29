@@ -6,7 +6,6 @@ function g() {
 	fi
 	git add -A
 	git commit -m "$1"
-	git push
 }
 alias g=g
 

@@ -10,3 +10,4 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.relativenumber = true
 
 vim.g.autoformat = false
+vim.opt.scrolloff = 20
