@@ -8,4 +8,4 @@ source $ZDOTDIR/zsh_function.sh
 source $ZDOTDIR/zsh_alias.sh
 source $ZDOTDIR/zsh_env.sh
 
-eval "$(uv generate-shell-completion zsh)"
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
