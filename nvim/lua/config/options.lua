@@ -1,13 +1,38 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.scrolloff = 20
 
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.expandtab = false
-vim.opt.smartindent = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-vim.opt.relativenumber = true
+vim.o.termguicolors = true
+vim.o.undofile = true
+vim.o.showmode = false
+
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.smartindent = true
+vim.o.breakindent = true
+vim.o.expandtab = false
+
+vim.o.cmdheight = 0
+
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+vim.schedule(function()
+	vim.o.clipboard = "unnamedplus"
+end)
 
 vim.g.autoformat = false
-vim.opt.scrolloff = 20
+vim.g.have_nerd_font = true
+
+vim.deprecate = function() end
+
+vim.diagnostic.config({
+	virtual_text = {
+		prefix = "●",
+		spacing = 2,
+	},
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
+})

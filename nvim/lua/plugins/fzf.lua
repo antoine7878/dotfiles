@@ -1,13 +1,10 @@
 return {
-  "ibhagwan/fzf-lua",
-  opts = function(_, opts)
-    opts.files = vim.tbl_deep_extend("force", opts.files or {}, {
-      fd_opts = "--exclude '.*'",
-    })
-    return opts
-  end,
-  keys = {
-    { "<leader>fF", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
-    { "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
-  },
+	"ibhagwan/fzf-lua",
+	dependencies = { "echasnovski/mini.icons" },
+	keys = {
+		{ "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
+		{ "<leader>/", "<cmd>FzfLua live_grep<cr>", desc = "Grep (Root Dir)" },
+		{ "<leader><space>", "<cmd>FzfLua files<cr>", desc = "Find Files (Root Dir)" },
+	},
+	config = function() end,
 }
