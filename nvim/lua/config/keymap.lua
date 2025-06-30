@@ -2,3 +2,4 @@ vim.keymap.set("n", "H", "<cmd>BufferLineCyclePrev<CR>", { noremap = true, silen
 vim.keymap.set("n", "L", "<cmd>BufferLineCycleNext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { noremap = true, silent = true, desc = "Delete buffer" })
 vim.keymap.set("n", "<leader>fn", ":enew<CR>", { noremap = true, silent = true, desc = "New buffer" })
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
