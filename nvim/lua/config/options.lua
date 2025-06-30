@@ -1,6 +1,6 @@
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.scrolloff = 20
+vim.o.scrolloff = 10
 
 vim.o.termguicolors = true
 vim.o.undofile = true

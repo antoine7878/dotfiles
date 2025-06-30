@@ -9,26 +9,16 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "pyright", "ruff" },
+				ensure_installed = { "lua_ls", "clangd", "pyright", "ruff", "bashls" },
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
-		config = function()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.clangd.setup({})
-			lspconfig.ruff.setup({})
-			lspconfig.pyright.setup({})
-		end,
-		-- opts = function(_, opts)
-		-- 	local servers = { "pyright", "basedpyright", "ruff", "ruff_lsp" }
-		-- 	for _, server in ipairs(servers) do
-		-- 		opts.servers[server] = opts.servers[server] or {}
-		-- 		opts.servers[server].enabled = true
-		-- 	end
-		-- end,
+		opts = {
+			inlay_hints = { enabled = false },
+		},
+		config = function() end,
 	},
 	{
 		"folke/lazydev.nvim",

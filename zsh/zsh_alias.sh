@@ -1,5 +1,5 @@
-
 alias vim="nvim"
+alias tree="tree --gitignore"
 
 alias cc="clang"
 alias c++="clang++"
@@ -22,4 +22,3 @@ alias gp="git push"
 alias grep="grep -r -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}"
 
 alias venv="source venv.sh"
-
