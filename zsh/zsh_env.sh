@@ -11,5 +11,6 @@ export XLA_FLAGS="--xla_gpu_cuda_data_dir=/opt/cuda"
 export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export PYGAME_HIDE_SUPPORT_PROMPT=hide
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export HOMEBREW_NO_ENV_HINTS
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
