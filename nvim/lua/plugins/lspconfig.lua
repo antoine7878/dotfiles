@@ -9,7 +9,7 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "pyright", "ruff", "bashls", "black" },
+				ensure_installed = { "lua_ls", "clangd", "pyright", "ruff", "bashls" },
 			})
 		end,
 	},
@@ -27,9 +27,9 @@ return {
 		opts = {
 			library = {
 				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
-				{ path = "LazyVim", words = { "LazyVim" } },
-				{ path = "snacks.nvim", words = { "Snacks" } },
-				{ path = "lazy.nvim", words = { "LazyVim" } },
+				{ path = "LazyVim",            words = { "LazyVim" } },
+				{ path = "snacks.nvim",        words = { "Snacks" } },
+				{ path = "lazy.nvim",          words = { "LazyVim" } },
 			},
 		},
 	},

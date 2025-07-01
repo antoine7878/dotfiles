@@ -12,5 +12,6 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRAR
 export PYGAME_HIDE_SUPPORT_PROMPT=hide
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export HOMEBREW_NO_ENV_HINTS
+export RUST_BACKTRACE=1
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
