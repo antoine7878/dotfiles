@@ -5,6 +5,7 @@ vim.o.scrolloff = 10
 vim.o.termguicolors = true
 vim.o.undofile = true
 vim.o.showmode = false
+vim.o.wrap = false
 
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
