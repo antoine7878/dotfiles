@@ -34,6 +34,7 @@ return {
 			"yaml",
 			"ninja",
 			"rst",
+			"rust",
 		},
 	},
 	config = function(_, opts)
