@@ -19,6 +19,12 @@ alias vogo=vogo
 function loop() {
 	for ((i = 0; i < $1; i++)); do
 		eval "${*:2}"
-	done
-}
+	done }
 alias loop=loop
+
+function o() {
+	ocamlopt *.ml &&
+	rm *.cmx *.cmi *.o &&
+	time ./a.out
+}
+alias o=o

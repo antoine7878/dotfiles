@@ -1,5 +1,20 @@
 return {
 	{
+		'echasnovski/mini.icons',
+		version = false,
+		config = function()
+			require('mini.icons').setup()
+		end
+	},
+	{
+		'echasnovski/mini.statusline',
+		version = false,
+		config = function()
+			require('mini.statusline').setup()
+		end
+
+	},
+	{
 		"echasnovski/mini.pairs",
 		opts = {
 			modes = { insert = true, command = true, terminal = false },
@@ -23,8 +38,8 @@ return {
 					f = ai.gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }), -- function
 					c = ai.gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }), -- class
 					t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" }, -- tags
-					d = { "%f[%d]%d+" }, -- digits
-					e = { -- Word with case
+					d = { "%f[%d]%d+" },                                           -- digits
+					e = {                                                          -- Word with case
 						{
 							"%u[%l%d]+%f[^%l%d]",
 							"%f[%S][%l%d]+%f[^%l%d]",
@@ -33,7 +48,7 @@ return {
 						},
 						"^().*()$",
 					},
-					u = ai.gen_spec.function_call(), -- u for "Usage"
+					u = ai.gen_spec.function_call(),            -- u for "Usage"
 					U = ai.gen_spec.function_call({ name_pattern = "[%w_]" }), -- without dot in function name
 				},
 			}
@@ -57,5 +72,8 @@ return {
 		"echasnovski/mini.snippets",
 		event = "InsertEnter", -- don't depend on other plugins to load...
 		dependencies = "rafamadriz/friendly-snippets",
+		-- config = function()
+		-- 	require('mini.snippets').setup()
+		-- end
 	},
 }

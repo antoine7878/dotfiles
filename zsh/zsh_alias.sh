@@ -1,5 +1,4 @@
 alias vim="nvim"
-alias tree="tree --gitignore"
 
 alias cc="clang"
 alias c++="clang++"

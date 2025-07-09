@@ -12,12 +12,12 @@ return {
 			},
 		},
 	},
-	{
-		"nvim-lualine/lualine.nvim",
-		config = function()
-			require("lualine").setup({})
-		end,
-	},
+	-- {
+	-- 	"nvim-lualine/lualine.nvim",
+	-- 	config = function()
+	-- 		require("lualine").setup({})
+	-- 	end,
+	-- },
 	{
 		"navarasu/onedark.nvim",
 		priority = 1000,
