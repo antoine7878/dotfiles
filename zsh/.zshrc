@@ -8,6 +8,5 @@ source $ZDOTDIR/zsh_function.sh
 source $ZDOTDIR/zsh_alias.sh
 source $ZDOTDIR/zsh_env.sh
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias luamake="/home/antoine/.config/nvim/lua-language-server/3rd/luamake/luamake"
