@@ -24,7 +24,6 @@ alias loop=loop
 
 function o() {
 	ocamlopt *.ml &&
-	rm *.cmx *.cmi *.o &&
 	time ./a.out
 }
 alias o=o
