@@ -13,6 +13,8 @@ alias clean="make clean"
 alias fclean="make fclean"
 alias ffclean="make ffclean"
 
+alias oclean="rm -f *.o; rm -f *.cmo ; rm -f *.cmi ; rm -f *.cmx ; rm -f a.out"
+
 alias python='python3'
 alias s='source .venv/bin/activate'
 
