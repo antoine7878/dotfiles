@@ -14,6 +14,7 @@ alias fclean="make fclean"
 alias ffclean="make ffclean"
 
 alias oclean="rm -f *.o; rm -f *.cmo ; rm -f *.cmi ; rm -f *.cmx ; rm -f a.out"
+alias d="dune build && dune exec bin/main.exe"
 
 alias python='python3'
 alias s='source .venv/bin/activate'
