@@ -15,11 +15,11 @@ export HOMEBREW_NO_ENV_HINTS
 export RUST_BACKTRACE=1
 
 
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if [ $(whoami) != "root" ]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 	[[ ! -r '/home/ale-tell/.opam/opam-init/init.zsh' ]] || source '/home/ale-tell/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 	export XDG_CONFIG_HOME="$HOME/.config"
-	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	eval "$(opam env)"
 	. "$HOME/.cargo/env"
 fi
