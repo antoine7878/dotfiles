@@ -15,14 +15,17 @@ return {
 	-- {
 	-- 	"nvim-lualine/lualine.nvim",
 	-- 	config = function()
-	-- 		require("lualine").setup({}) end,
+	-- 		require("lualine").setup({})
+	-- 	end,
 	-- },
 	{
-		'joshdick/onedark.vim',
+		"navarasu/onedark.nvim",
 		priority = 1000,
 		config = function()
-			vim.cmd('syntax on')
-			vim.cmd('colorscheme onedark')
-		end
-	}
+			require("onedark").setup({
+				style = "deep",
+			})
+			require("onedark").load()
+		end,
+	},
 }
