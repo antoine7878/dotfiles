@@ -3,6 +3,7 @@ alias vim="nvim"
 alias cc="clang"
 alias c++="clang++"
 alias b="bear -- make re"
+alias tmux="tmux -u2"
 
 alias t="make test"
 alias vt="make vtest"
