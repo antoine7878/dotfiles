@@ -14,6 +14,7 @@ rm -rf ~/.prettierrc.yaml
 rm -rf ~/.ruff.toml
 rm -rf ~/.vimrc
 rm -rf ~/.zshenv
+rm -rf ~/.tmux.conf
 
 ######################
 
@@ -31,3 +32,4 @@ ln -s ~/dotfiles/.prettierrc.yaml ~/
 ln -s ~/dotfiles/.ruff.toml ~/
 ln -s ~/dotfiles/.vimrc ~/
 ln -s ~/dotfiles/.zshenv ~/
+ln -s ~/dotfiles/.tmux.conf ~/

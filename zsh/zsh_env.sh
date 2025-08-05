@@ -1,9 +1,9 @@
 export PATH=$PATH:"$HOME/Appimage"
 export PATH=$PATH:"$HOME/.local/bin"
+export PATH=$PATH:"$HOME/.local/kitty.app/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="/usr/local/cuda/bin${PATH:+:${PATH}}"
 export PATH="$CUDA_HOME/bin:$PATH"
-export PATH="$PATH:/path/to/lua-language-server/bin/Linux"
 
 export CUDA_HOME=/opt/cuda
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
@@ -16,6 +16,7 @@ export RUST_BACKTRACE=1
 
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH=$HOME/.brew/bin:$PATH
 if [ $(whoami) != "root" ]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 	[[ ! -r '/home/ale-tell/.opam/opam-init/init.zsh' ]] || source '/home/ale-tell/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
