@@ -16,6 +16,7 @@ export RUST_BACKTRACE=1
 
 if [[ $(whoami) == "root" ]]; then
 	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	eval "$(opam env)"
 fi
 
 export PATH=$HOME/.brew/bin:$PATH
