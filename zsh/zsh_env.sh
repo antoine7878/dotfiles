@@ -13,18 +13,3 @@ export PYGAME_HIDE_SUPPORT_PROMPT=hide
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export HOMEBREW_NO_ENV_HINTS
 export RUST_BACKTRACE=1
-
-if [[ $(whoami) == "root" ]]; then
-	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-	eval "$(opam env)"
-fi
-
-export PATH=$HOME/.brew/bin:$PATH
-if [[ $(whoami) != "ale-tell" && $(whoami) != "root" ]]; then
-	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-	[[ ! -r '/home/ale-tell/.opam/opam-init/init.zsh' ]] || source '/home/ale-tell/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-	export XDG_CONFIG_HOME="$HOME/.config"
-	eval "$(opam env)"
-	. "$HOME/.cargo/env"
-fi
