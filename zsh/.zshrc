@@ -13,6 +13,7 @@ alias luamake="/home/antoine/.config/nvim/lua-language-server/3rd/luamake/luamak
 
 if [[ $(uname) == "Darwin" ]]; then
 	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	[[ ! -r '/Users/antoine/.opam/opam-init/init.zsh' ]] || source '/Users/antoine/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 else
 	export PATH=$HOME/.brew/bin:$PATH
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

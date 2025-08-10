@@ -2,9 +2,15 @@ return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "echasnovski/mini.icons" },
 	keys = {
-		{ "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
-		{ "<leader>/", "<cmd>FzfLua live_grep<cr>", desc = "Grep (Root Dir)" },
-		{ "<leader><space>", "<cmd>FzfLua files<cr>", desc = "Find Files (Root Dir)" },
+		{ "<leader>:",       "<cmd>FzfLua command_history<cr>", desc = "Command History" },
+		{ "<leader>/",       "<cmd>FzfLua live_grep<cr>",       desc = "Grep (Root Dir)" },
+		{ "<leader><space>", "<cmd>FzfLua files<cr>",           desc = "Find Files (Root Dir)" },
 	},
-	config = function() end,
+	config = function()
+		require("fzf-lua").setup({
+			files = {
+				cmd = "rg --files --hidden --glob '!.git/*'"
+			}
+		})
+	end,
 }
