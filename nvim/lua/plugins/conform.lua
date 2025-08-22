@@ -17,6 +17,7 @@ return {
 	---@type conform.setupOpts
 	opts = {
 		formatters_by_ft = {
+			cpp = { "clangd-format" },
 			lua = { "stylua" },
 			ocaml = { "ocamlformat" },
 			python = { "ruff", "black" },
