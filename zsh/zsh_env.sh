@@ -3,6 +3,7 @@ export PATH=$PATH:"$HOME/.local/bin"
 export PATH=$PATH:"$HOME/.local/kitty.app/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="/usr/local/cuda/bin${PATH:+:${PATH}}"
+export PATH="/Users/antoine/.cargo/bin${PATH:+:${PATH}}"
 export PATH="$CUDA_HOME/bin:$PATH"
 
 export CUDA_HOME=/opt/cuda

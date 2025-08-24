@@ -18,19 +18,37 @@ return {
 		opts = {
 			inlay_hints = { enabled = false },
 		},
-		config = function() end,
+		config = function()
+			local lspconfig = require("lspconfig")
+			lspconfig.clangd.setup({
+				cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
+				init_options = {
+					fallbackFlags = { "-std=c++17" },
+				},
+			})
+			lspconfig.rust_analyzer.setup({
+				settings = {
+					["rust-analyzer"] = {
+						cargo = { allFeatures = true },
+						-- checkOnSave = { command = "clippy" },
+					},
+				},
+			})
+		end,
 	},
 	{
-		"folke/lazydev.nvim",
-		ft = "lua",
-		cmd = "LazyDev",
-		opts = {
-			library = {
-				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
-				{ path = "LazyVim",            words = { "LazyVim" } },
-				{ path = "snacks.nvim",        words = { "Snacks" } },
-				{ path = "lazy.nvim",          words = { "LazyVim" } },
-			},
-		},
+		"simrat39/rust-tools.nvim",
+		config = function()
+			local rt = require("rust-tools")
+			rt.setup({
+				server = {
+					on_attach = function(_, bufnr)
+						-- Keymaps for Rust
+						vim.keymap.set("n", "K", rt.hover_actions.hover_actions, { buffer = bufnr })
+						vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+					end,
+				},
+			})
+		end,
 	},
 }
