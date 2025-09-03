@@ -23,6 +23,6 @@ alias s='source .venv/bin/activate'
 
 alias ga="git add -A"
 alias gp="git push"
-alias grep="grep -r -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}"
+# alias grep="grep -r -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}"
 
 alias venv="source venv.sh"
