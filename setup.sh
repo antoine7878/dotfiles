@@ -5,8 +5,6 @@
 rm -rf ~/.config/nvim
 rm -rf ~/.config/zsh
 rm -rf ~/.config/kitty
-rm -rf ~/.config/i3
-rm -rf ~/.config/tmux
 
 rm -rf ~/.oh-my-zsh
 rm -rf ~/.clang-format
@@ -15,7 +13,6 @@ rm -rf ~/.prettierrc.yaml
 rm -rf ~/.ruff.toml
 rm -rf ~/.vimrc
 rm -rf ~/.zshenv
-rm -rf ~/.tmux.conf
 
 ######################
 
@@ -24,8 +21,6 @@ mkdir -p ~/.config
 ln -s ~/dotfiles/nvim ~/.config/
 ln -s ~/dotfiles/zsh ~/.config/
 ln -s ~/dotfiles/kitty ~/.config/
-ln -s ~/dotfiles/i3 ~/.config/
-ln -s ~/dotfiles/tmux ~/.config/
 
 ln -s ~/dotfiles/.clang-format ~/
 ln -s ~/dotfiles/.oh-my-zsh ~/
@@ -34,4 +29,3 @@ ln -s ~/dotfiles/.prettierrc.yaml ~/
 ln -s ~/dotfiles/.ruff.toml ~/
 ln -s ~/dotfiles/.vimrc ~/
 ln -s ~/dotfiles/.zshenv ~/
-ln -s ~/dotfiles/.tmux.conf ~/

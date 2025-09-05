@@ -5,6 +5,8 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="/usr/local/cuda/bin${PATH:+:${PATH}}"
 export PATH="/Users/antoine/.cargo/bin${PATH:+:${PATH}}"
 export PATH="$CUDA_HOME/bin:$PATH"
+export PATH=$HOME/.brew/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 
 export CUDA_HOME=/opt/cuda
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
@@ -15,8 +17,6 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export HOMEBREW_NO_ENV_HINTS
 export RUST_BACKTRACE=1
 
-export PATH=$HOME/.brew/bin:$PATH
-eval "$(opam env)"
 if [[ $(whoami) != "ale-tell" && $(whoami) != "root" ]]; then
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
