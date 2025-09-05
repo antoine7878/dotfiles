@@ -44,6 +44,7 @@ return {
 				server = {
 					on_attach = function(_, bufnr)
 						-- Keymaps for Rust
+						vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, bufopts)
 						vim.keymap.set("n", "K", rt.hover_actions.hover_actions, { buffer = bufnr })
 						vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
 					end,
