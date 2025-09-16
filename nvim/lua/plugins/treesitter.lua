@@ -13,6 +13,7 @@ return {
 			"diff",
 			"html",
 			"javascript",
+			"css",
 			"jsdoc",
 			"json",
 			"jsonc",
@@ -23,6 +24,7 @@ return {
 			"markdown_inline",
 			"printf",
 			"python",
+			"cython",
 			"query",
 			"regex",
 			"toml",
@@ -38,6 +40,15 @@ return {
 		},
 	},
 	config = function(_, opts)
+		local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+		parser_config.cython = {
+			install_info = {
+				url = "https://github.com/b0o/tree-sitter-cython",
+				files = { "src/parser.c", "src/scanner.c" }, -- 👈 include scanner.c!
+				branch = "master",
+			},
+			filetype = "cython",
+		}
 		require("nvim-treesitter.configs").setup(opts)
 	end,
 }

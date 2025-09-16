@@ -25,3 +25,8 @@ alias ga="git add -A"
 alias gp="git push"
 
 alias venv="source venv.sh"
+
+alias logs="docker logs padam-dispatch --follow"
+
+# Padam
+alias gpy="grep -n -r --include \*.py --include \*.pxd --include \*.pyx"

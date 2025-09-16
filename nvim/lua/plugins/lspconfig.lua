@@ -9,7 +9,7 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "pyright", "ruff", "bashls" },
+				ensure_installed = { "lua_ls", "clangd", "basedpyright", "bashls" },
 			})
 		end,
 	},
@@ -25,6 +25,20 @@ return {
 				init_options = {
 					fallbackFlags = { "-std=c++17" },
 				},
+			})
+
+			lspconfig.basedpyright.setup({
+				filetypes = { "python" },
+				settings = {
+					basedpyright = {
+						analysis = {
+							autoSearchPaths = true,
+							useLibraryCodeForTypes = true,
+							typeCheckingMode = 'off',
+						},
+					},
+				}
+
 			})
 			lspconfig.rust_analyzer.setup({
 				settings = {
