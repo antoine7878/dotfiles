@@ -28,5 +28,15 @@ alias venv="source venv.sh"
 
 alias logs="docker logs padam-dispatch --follow"
 
-# Padam
 alias gpy="grep -n -r --include \*.py --include \*.pxd --include \*.pyx"
+#
+# Padam
+alias pdc='docker compose exec padam-dispatch'
+alias pdr='docker compose run --rm padam-dispatch'
+alias padam='pdr'
+alias padam-logs='docker compose logs -f padam-dispatch'
+alias padam-shell='pdr shell_plus'
+alias padam-bash='pdc bash'
+function padam-notebook {
+  docker compose run -p 8888:8888 padam-dispatch shell_plus --notebook
+}
